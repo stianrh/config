@@ -1,0 +1,15 @@
+[submodule "nvim/bundle/colorschemes"]
+	path = nvim/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "nvim/bundle/command-t"]
+	path = nvim/bundle/command-t
+	url = https://github.com/wincent/command-t.git
+[submodule "nvim/bundle/nerdtree"]
+	path = nvim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "nvim/bundle/YouCompleteMe"]
+	path = nvim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "nvim/bundle/vim-obsession"]
+	path = nvim/bundle/vim-obsession
+	url = git://github.com/tpope/vim-obsession.git
