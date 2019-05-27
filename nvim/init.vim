@@ -60,3 +60,7 @@ augroup CursorLine
 augroup END
 nnoremap <Leader>c :set cursorline!<CR>
 "set t_Co=256
+map <Leader>o0 :! DISPLAY=:0 gedit %<CR>
+map <Leader>o10 :! DISPLAY=localhost:10 gedit %<CR>
+map <Leader>o11 :! DISPLAY=localhost:11 gedit %<CR>
+map <Leader>o12 :! DISPLAY=localhost:12 gedit %<CR>

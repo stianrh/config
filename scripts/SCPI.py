@@ -50,6 +50,24 @@ class SCPI:
         self.s.send("SENS:CURR:CCOM OFF, (@" + str(channel) + ")\n")
         self.s.send("MEAS:ARR:POW? (@" + str(channel) + ")\n")
 
+    def getAvgCurrent(self, channel, samples, res):
+        self.s.send("SENS:SWE:OFFS:POIN 0, (@" + str(channel) + ")\n")
+        self.s.send("SENS:SWE:TINT " + str(1/float(res)) + ",(@" + str(channel) + ")\n")
+        self.s.send("SENS:SWE:POIN " + str(samples) + ",(@" + str(channel) + ")\n")
+        self.s.send("SENS:CURR:RANG:AUTO ON, (@" + str(channel) + ")\n")
+        self.s.send("MEAS:CURR? (@" + str(channel) + ")\n")
+        self.s.settimeout(4)
+        return float(self.s.recv(1024))
+
+    def getAvgVoltage(self, channel, samples, res):
+        self.s.send("SENS:SWE:OFFS:POIN 0, (@" + str(channel) + ")\n")
+        self.s.send("SENS:SWE:TINT " + str(1/float(res)) + ",(@" + str(channel) + ")\n")
+        self.s.send("SENS:SWE:POIN " + str(samples) + ",(@" + str(channel) + ")\n")
+        self.s.send("SENS:VOLT:RANG:AUTO ON, (@" + str(channel) + ")\n")
+        self.s.send("MEAS:VOLT? (@" + str(channel) + ")\n")
+        self.s.settimeout(4)
+        return float(self.s.recv(1024))
+
     def getCurrentMeasurements(self, channel, samples):
         self.s.settimeout(1)
         buf = []

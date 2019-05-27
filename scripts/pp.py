@@ -3,6 +3,7 @@
 import SCPI
 import time
 import sys
+from eng import EngNumber
 
 class PA_control():
 
@@ -25,7 +26,12 @@ class PA_control():
 
     def main(self, argv):
         if len(argv) <= 1:
+            self.connect()
+            self.ch = 3
             self.help()
+            self.turn_off()
+            time.sleep(0.5)
+            self.turn_on()
             return -1
 
         self.connect()
@@ -49,6 +55,10 @@ class PA_control():
                 print "voltage too high"
                 return -1
             self.set_voltage(cmd[1:])
+        elif cmd[0] == 'c':
+            ret = self.s.getAvgCurrent(self.ch,195312*2,195312)
+            print str(EngNumber(ret)) + "A"
+
 
 
 if __name__ == '__main__':
