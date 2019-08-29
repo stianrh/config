@@ -56,10 +56,14 @@ class PA_control():
                 return -1
             self.set_voltage(cmd[1:])
         elif cmd[0] == 'c':
-            ret = self.s.getAvgCurrent(self.ch,195312*2,195312)
-            print str(EngNumber(ret)) + "A"
-
-
+            try:
+                if cmd[1] == 'c':
+                    while(True):
+                        ret = self.s.getAvgCurrent(self.ch,195312*2,195312)
+                        print str(EngNumber(ret)) + "A"
+            except:
+                ret = self.s.getAvgCurrent(self.ch,195312*2,195312)
+                print str(EngNumber(ret)) + "A"
 
 if __name__ == '__main__':
     pa = PA_control()

@@ -10,7 +10,7 @@ def main(argv):
     #flash = "\ndevice nrf52\nS\nSWD\n4000\n"#sleep 1000\n"
     flash = "\nconnect\nnrf52\nS\n4000\nr\n"#sleep 1000\n"
     #ip = "\nip 192.168.200.204\n"
-    ip = "\nip 192.168.15.46\n"
+    ip = "\nip 192.168.15.61\n"
     tun = "\nip tunnel:683545400\n"
     erase = False
     flash_sd = False
