@@ -14,6 +14,8 @@ class PA_control():
         print "pp 1off\t\tch 1 off"
         print "pp 1on\t\tch 1 on"
         print "pp 1v3.3\tch 1 voltage to 3.3V"
+        print "pp 1c\t\taverage current ch 1"
+        print "pp 1cc\t\tcontinuous average current ch 1"
 
     def connect(self):
         self.s = SCPI.SCPI('pa05')
