@@ -28,12 +28,7 @@ class PA_control():
 
     def main(self, argv):
         if len(argv) <= 1:
-            self.connect()
-            self.ch = 3
             self.help()
-            self.turn_off()
-            time.sleep(0.5)
-            self.turn_on()
             return -1
 
         self.connect()
