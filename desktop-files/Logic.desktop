@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.2.18
+Type=Application
+Terminal=false
+Exec=/home/stha/programs/logic_1.2.18_64-bit/Logic
+Name=Saleae Logic
+Comment=Saleae Logic
+Icon=/home/stha/programs/logic_1.2.18_64-bit/icon.png

@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.9.20.2
+Type=Application
+Terminal=true
+#Exec=gnome-terminal -e "bash -c 'sudo -i /usr/local/bin/fido'"
+Exec=sudo -i nohup /usr/local/bin/fido && exit
+#Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY /usr/local/bin/fido
+Name=Fido
+Comment=Fido
+Icon=/home/stha/programs/fido.1.9.20.2/dog.png

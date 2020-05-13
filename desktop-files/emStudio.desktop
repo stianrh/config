@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=4.20a
+Type=Application
+Terminal=false
+#Exec=gnome-terminal -e "bash -c 'sudo -i /home/stha/programs/arm_segger_embedded_studio_v420a_linux_x64_nordic/bin/emStudio;'"
+Exec=/home/stha/programs/arm_segger_embedded_studio_v420a_linux_x64_nordic/bin/emStudio
+Name=Embedded Studio
+Comment=Embedded Studio
+Icon=/home/stha/programs/arm_segger_embedded_studio_v420a_linux_x64_nordic/bin/StudioIcon.png
